@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ASPMVCEntity_CRUD.Models.Event>
+
+@{
+    ViewBag.Title = "Events Management";
+}
+
+<h2>Events Management @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success pull-right" })</h2>
+
+<hr />
+
+<table class="table table-bordered table-hover table-responsive">
+    <tr>
+        <th>
+            Event Name
+        </th>
+        <th>
+            Event Date
+        </th>
+        <th>
+            Employee Name
+        </th>
+        <th class="text-center">
+            Actions
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Name)
+        </td>
+        <td class="text-center">
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }, new { @class = "btn btn-info btn-sm" })
+            @Html.ActionLink("Details", "Details", new { id=item.ID }, new { @class = "btn btn-warning btn-sm" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID }, new { @class = "btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>
