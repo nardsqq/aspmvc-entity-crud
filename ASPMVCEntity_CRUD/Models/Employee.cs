@@ -11,7 +11,9 @@ namespace ASPMVCEntity_CRUD.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public partial class Employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,11 +21,24 @@ namespace ASPMVCEntity_CRUD.Models
         {
             this.Events = new HashSet<Event>();
         }
-    
+        
+        [Key]
         public int ID { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string Name { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string Department { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string Username { get; set; }
+
+        [Required]
+        [StringLength(50)]
         public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
