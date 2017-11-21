@@ -13,5 +13,11 @@ namespace ASPMVCEntity_CRUD.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Auth()
+        {
+            return View();
+        }
     }
 }
