@@ -40,6 +40,7 @@ namespace ASPMVCEntity_CRUD.Models
         public string Username { get; set; }
 
         [Required]
+        [DataType(DataType.Password)]
         [StringLength(50)]
         public string Password { get; set; }
     
