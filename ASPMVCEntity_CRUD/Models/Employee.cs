@@ -26,6 +26,7 @@ namespace ASPMVCEntity_CRUD.Models
         public int ID { get; set; }
 
         [Required]
+        [DisplayName("Employee Name")]
         [StringLength(50)]
         public string Name { get; set; }
 
@@ -34,6 +35,7 @@ namespace ASPMVCEntity_CRUD.Models
         public string Department { get; set; }
 
         [Required]
+        [DisplayName("User Name")]
         [StringLength(50)]
         public string Username { get; set; }
 
