@@ -35,11 +35,11 @@ namespace ASPMVCEntity_CRUD.Models
         [StringLength(50)]
         public string Department { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The Username Field is Required")]
         [StringLength(50)]
         public string Username { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The Password Field is Required")]
         [DataType(DataType.Password)]
         [StringLength(50)]
         public string Password { get; set; }
