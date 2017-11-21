@@ -12,6 +12,7 @@ namespace ASPMVCEntity_CRUD.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel;
     
     public partial class Event
     {
@@ -19,6 +20,7 @@ namespace ASPMVCEntity_CRUD.Models
         public int ID { get; set; }
 
         [Required]
+        [DisplayName("Event Name")]
         [StringLength(50)]
         public string Name { get; set; }
 
@@ -27,6 +29,7 @@ namespace ASPMVCEntity_CRUD.Models
         public Nullable<System.DateTime> Date { get; set; }
 
         [Required]
+        [DisplayName("Assigned Employee")]
         public Nullable<int> AssignedEmployee { get; set; }
     
         public virtual Employee Employee { get; set; }
