@@ -26,6 +26,7 @@ namespace ASPMVCEntity_CRUD.Models
 
         [Required]
         [DataType(DataType.Date)]
+        [DisplayName("Event Date")]
         public Nullable<System.DateTime> Date { get; set; }
 
         [Required]
